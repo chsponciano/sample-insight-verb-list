@@ -7,7 +7,13 @@ body {
     background-color: var(--primary);
     padding: 15px;
     color: var(--secondary);
-    overflow-y: auto;
+    overflow-x: hidden;
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
 
 .content {
@@ -42,15 +48,19 @@ button {
     background-color: var(--secondary);
 }
 
+footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+
 @media only screen and (max-width: 1200px) {
     .col-sm-4 {
         width: 100% !important;
     }
-
     .sorted {
         font-size: 75px !important;
     }
-
     .card {
         margin-bottom: 25px;
     }
