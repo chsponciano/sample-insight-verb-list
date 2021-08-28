@@ -1,0 +1,54 @@
+:root {
+    --primary: #0040b9;
+    --secondary: #ffcc29;
+    --danger: #d32121;
+    --success: #27B54B;
+    --footer: #f1f1f1;
+}
+
+label, .content {
+    color: white;
+}
+
+.form-margin {
+    margin-top: 10px;
+}
+
+header {
+    background-color: var(--primary);
+    padding: 15px;
+}
+
+button {
+    padding: 10px;
+    width: 100px;
+    border-radius: 10px;
+    border: 0;
+    font-size: 20px;
+    color: black;
+    background-color: var(--secondary);
+}
+
+.sorted {
+    font-size: 200px;
+}
+
+.display {
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    background-color: var(--primary);
+}
+
+.card-title, .card-body {
+    font-size: 20px;
+    color: white;
+}
+
+.card-body {
+    margin-left: 20%;
+    margin-right: 20%;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: #337ab7;
+}
