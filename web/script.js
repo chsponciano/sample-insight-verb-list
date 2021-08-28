@@ -91,4 +91,25 @@ function changeHidden() {
     document.getElementsByClassName("second-display")[0].hidden = isHidden;
 }
 
-this.random();
+function openTable() {
+    const table = document.getElementById("verb-table");
+
+    for (let index = 0; index < verbs.length; index++) {
+        let verb = verbs[index];
+        let row = table.insertRow(index + 1);
+        row.insertCell(0).innerHTML = verb.baseForm;
+        row.insertCell(1).innerHTML = verb.past;
+        row.insertCell(2).innerHTML = verb.pastParticiple;
+        row.insertCell(3).innerHTML = verb.translation; 
+    }
+}
+
+const url = "https://serene-bayou-96328.herokuapp.com";
+
+function openRandom() {
+    window.open(url);
+}
+
+function openList() {
+    window.open(url + "?list");
+}
