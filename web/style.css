@@ -7,7 +7,7 @@ body {
     background-color: var(--primary);
     padding: 15px;
     color: var(--secondary);
-    ;
+    overflow-y: auto;
 }
 
 .content {
@@ -29,13 +29,6 @@ button {
     font-size: 150px;
 }
 
-.display {
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    background-color: var(--primary);
-}
-
 .card-title, .card-body {
     font-size: 20px;
     color: var(--primary);
@@ -52,6 +45,10 @@ button {
 @media only screen and (max-width: 1200px) {
     .col-sm-4 {
         width: 100% !important;
+    }
+
+    .sorted {
+        font-size: 75px !important;
     }
 
     .card {
