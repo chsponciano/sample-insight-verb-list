@@ -107,9 +107,9 @@ function openTable() {
 const url = "https://serene-bayou-96328.herokuapp.com";
 
 function openRandom() {
-    window.open(url);
+    window.open(url, "_self");
 }
 
 function openList() {
-    window.open(url + "?list");
+    window.open(url + "?list", "_self");
 }
