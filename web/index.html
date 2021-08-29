@@ -12,6 +12,7 @@
 </head>
 
 <body>
+    <audio src="" class="speech" hidden="true"></audio>
     <div class="d-grid gap-4">
         <button class="btn btn-primary" type="button" onclick="random()">Raflle</button>
         <button class="btn btn-primary" type="button" onclick="openList()">List All</button>
@@ -28,14 +29,14 @@
     <div class="text-center">
         <div class="display">
             <div class="row content">
-                <h1 class="sorted">----</h1>
+                <h1 class="sorted" onclick="playAudio(this)">----</h1>
             </div>
             <div class="row second-display">
                 <div class="col-sm-4">
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">PAST</h5>
-                            <p class="card-text card-past">----</p>
+                            <p class="card-text card-past" onclick="playAudio(this)">----</p>
                         </div>
                     </div>
                 </div>
@@ -43,7 +44,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title">PAST PARTICIPLE</h5>
-                            <p class="card-text card-past-participle">----</p>
+                            <p class="card-text card-past-participle" onclick="playAudio(this)">----</p>
                         </div>
                     </div>
                 </div>
@@ -51,7 +52,7 @@
                     <div class="card">
                         <div class="card-body">
                             <h5 class="card-title card-title-switch">TRANSLATION</h5>
-                            <p class="card-text card-switch">----</p>
+                            <p class="card-text card-switch" onclick="playAudio(this)">----</p>
                         </div>
                     </div>
                 </div>

@@ -1,3 +1,10 @@
+const verb_url = "https://serene-bayou-96328.herokuapp.com";
+const translate_url = "https://translate.google.com/translate_tts?tl=en&q=##text##&client=tw-ob";
+let viewed = [];
+let isPortuguese = false;
+let isHidden = false;
+let current;
+
 class Verb {
     constructor(baseForm, past, pastParticiple, translation) {
         this.baseForm = baseForm;
@@ -54,11 +61,6 @@ const verbs = [
     new Verb("To Write", "Wrote", "Written", "Escrever")
 ];
 
-var viewed = [];
-var isPortuguese = false;
-var isHidden = false;
-var current;
-
 function display(verb) {
     current = verb;
     document.getElementsByClassName("sorted")[0].innerText = (isPortuguese) ? verb.translation : verb.baseForm; 
@@ -104,12 +106,23 @@ function openTable() {
     }
 }
 
-const url = "https://serene-bayou-96328.herokuapp.com";
 
 function openRandom() {
-    window.open(url, "_self");
+    window.open(verb_url, "_self");
 }
 
 function openList() {
-    window.open(url + "?list", "_self");
+    window.open(verb_url + "?list", "_self");
+}
+
+function playAudio(element) {
+    if ((element.className == "sorted" && isPortuguese) || (element.className.includes("card-switch") && !isPortuguese)) {
+        return;
+    } 
+
+    let text = encodeURIComponent(element.textContent);
+    let url = translate_url.replace("##text##", text);
+    const audio = document.getElementsByClassName("speech")[0];
+    audio.src = url;
+    audio.play();
 }
