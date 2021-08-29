@@ -115,7 +115,7 @@ function openList() {
     window.open(verb_url + "?list", "_self");
 }
 
-function playAudio(element) {
+function playAudioInTranslate(element) {
     if ((element.className == "sorted" && isPortuguese) || (element.className.includes("card-switch") && !isPortuguese)) {
         return;
     } 
