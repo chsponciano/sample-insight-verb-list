@@ -120,7 +120,7 @@ function playAudioInTranslate(element) {
     } 
 
     let text = element.textContent;
-    let src = '../audios/' + text.toLocaleLowerCase().replace(' ', '').replace('/', '') + '.mp3';
+    let src = 'audios/' + text.toLocaleLowerCase().replace(' ', '').replace('/', '') + '.mp3';
     // translate_url.replace("##text##", text);
     const audio = document.getElementsByClassName("speech")[0];
     audio.src = encodeURI(src);

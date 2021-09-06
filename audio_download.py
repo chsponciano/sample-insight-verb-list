@@ -140,7 +140,7 @@ texts = [
 
 for text in texts:
     request = requests.get(url.replace('##text##', text), allow_redirects=True)
-    filename = './audios/{0}.mp3'.format(text.lower().replace(' ', '').replace('/', ''))
+    filename = './web/audios/{0}.mp3'.format(text.lower().replace(' ', '').replace('/', ''))
 
     if not os.path.exists(filename):
         print(f'{text} audio download...')
