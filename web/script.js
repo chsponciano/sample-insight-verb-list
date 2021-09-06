@@ -1,5 +1,4 @@
 const verb_url = "https://serene-bayou-96328.herokuapp.com";
-const translate_url = "https://translate.google.com/translate_tts?tl=en&q=##text##&client=tw-ob";
 let viewed = [];
 let isPortuguese = false;
 let isHidden = false;
@@ -120,9 +119,10 @@ function playAudioInTranslate(element) {
         return;
     } 
 
-    let text = encodeURIComponent(element.textContent);
-    let url = translate_url.replace("##text##", text);
+    let text = element.textContent;
+    let src = '../audios/' + text.toLocaleLowerCase().replace(' ', '').replace('/', '') + '.mp3';
+    // translate_url.replace("##text##", text);
     const audio = document.getElementsByClassName("speech")[0];
-    audio.src = url;
+    audio.src = encodeURI(src);
     audio.play();
 }
